@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         // Estudiante Adria 
         Estudiante::create([
             'nombre' => 'Adrià Matoses',
-            'email' => 'adriam.test@gmail.com',
+            'email' => 'adriam.webs@gmail.com',
             'telefono' => '123 456 789',
             'direccion' => 'Calle Falsa 123',
             'dni' => '12345678A'
