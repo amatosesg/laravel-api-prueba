@@ -369,7 +369,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"nombre\": \"Test 1234\",\r\n  \"email\": \"emailtest4@gmail.com\",\r\n  \"telefono\": \"987654321\",\r\n  \"direccion\": \"Avenida Programador 12\",\r\n  \"dni\": \"11122233A\"\r\n}",
+							"raw": "{\r\n  \"nombre\": \"Test 1234\",\r\n  \"email\": \"emailtest4@gmail.com\",\r\n  \"direccion\": \"Avenida Programador 12\",\r\n  \"dni\": \"11122233A\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
