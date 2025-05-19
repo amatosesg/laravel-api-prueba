@@ -1,0 +1,1066 @@
+{
+	"info": {
+		"_postman_id": "612f6eee-d074-4cbb-ac83-0eeb87dc7ca0",
+		"name": "Laravel API Prueba",
+		"description": "Documentación de la API de Estudiantes realizada para la prueba de PHP de Ilerna",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30314065",
+		"_collection_link": "https://api-ilerna.postman.co/workspace/Prueba-API-Php-Ilerna~50ff7055-e50a-474a-86f5-7d91fa0ee963/collection/30314065-612f6eee-d074-4cbb-ac83-0eeb87dc7ca0?action=share&source=collection_link&creator=30314065"
+	},
+	"item": [
+		{
+			"name": "GET /api/estudiantes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6Im80dnhmMm1KSGhQRWwzRkprVUp3K1E9PSIsInZhbHVlIjoiaDdhUFE5TnppcittUUVnbWtzUE44b3dTbHM5WWZEeUh4Z1M4WlZlWjU4cnlXSTBuRlpDajNkeE90aTNjNTBvQjdkdzQyeFBHRS9EWCsyV3NpcFkvOGZ3WkRvVXhTK3lCOUFJdW5HOVhGSHJJL01SbVpzUm1nOENYNmZySVBDWkMiLCJtYWMiOiI4NmJkNGY2MzhkNGVkNWRlZGJlMzAwMWJiYjlhMTY5YzQyYzI5Y2M0ZWFiYWY0ODg5YTViYzAwYjc3MjEyOTUxIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkkrdnpmRmtaYzZNRlU4TXZLSy8xL1E9PSIsInZhbHVlIjoiMXlUY000am1mVVpoOUVJZUFiRkwrRnlzanVCTHoxaVQrc3NNQmRDQlU1QmFNb0VERDZ3akFEV0dzR2dNVjdFanBzcXZyb001bzVuRWdVQXFIbVVJNjZpMGUrNDQyTTJBS2tzRkxSSmNPdEdXTURzR1M1aUVraHdsNnVpZi9BMHQiLCJtYWMiOiJmMTQ2NzFlMjliNGE0MDJmYzQyNjM4MDM2YWM1YjgwMjdkNWFmOGFmN2Q1M2E2MTQzMzI4MzYzNTFhOTdmMzA2IiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/estudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"estudiantes"
+					]
+				},
+				"description": "Lista todos los estudiantes.\n\nDevolverá todos los estudiantes que haya en la base de datos o, en caso de que no haya, un array vacio. Siempre con un 200."
+			},
+			"response": [
+				{
+					"name": "200 Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GET /api/estudiantes/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6Im80dnhmMm1KSGhQRWwzRkprVUp3K1E9PSIsInZhbHVlIjoiaDdhUFE5TnppcittUUVnbWtzUE44b3dTbHM5WWZEeUh4Z1M4WlZlWjU4cnlXSTBuRlpDajNkeE90aTNjNTBvQjdkdzQyeFBHRS9EWCsyV3NpcFkvOGZ3WkRvVXhTK3lCOUFJdW5HOVhGSHJJL01SbVpzUm1nOENYNmZySVBDWkMiLCJtYWMiOiI4NmJkNGY2MzhkNGVkNWRlZGJlMzAwMWJiYjlhMTY5YzQyYzI5Y2M0ZWFiYWY0ODg5YTViYzAwYjc3MjEyOTUxIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkkrdnpmRmtaYzZNRlU4TXZLSy8xL1E9PSIsInZhbHVlIjoiMXlUY000am1mVVpoOUVJZUFiRkwrRnlzanVCTHoxaVQrc3NNQmRDQlU1QmFNb0VERDZ3akFEV0dzR2dNVjdFanBzcXZyb001bzVuRWdVQXFIbVVJNjZpMGUrNDQyTTJBS2tzRkxSSmNPdEdXTURzR1M1aUVraHdsNnVpZi9BMHQiLCJtYWMiOiJmMTQ2NzFlMjliNGE0MDJmYzQyNjM4MDM2YWM1YjgwMjdkNWFmOGFmN2Q1M2E2MTQzMzI4MzYzNTFhOTdmMzA2IiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/estudiantes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"estudiantes",
+						"1"
+					]
+				},
+				"description": "Muestra los datos de un estudiante según su ID.\n\nRequiere que se le pase el ID del estudiante que buscamos por parámetro.\n\nDevolverá el estudiante que buscamos con un 200 o un 404 si no lo encuentra."
+			},
+			"response": [
+				{
+					"name": "200 Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "404 Not Found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/9999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"9999"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "POST /api/estudiantes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "XSRF-TOKEN=eyJpdiI6Ik82OWh0MjVsa2JBYm9NWVNPNnJkdGc9PSIsInZhbHVlIjoiOUlpMTk0R3VMSWxsYzF4M0YwRXJtN0g5OTRmek9uYzVxaG5Tb2lILzNXOGM3N0dwVTIvaGJRWVhDUGlkcnV6VmF1ODRUZk1aVmRTamxNVVoydGorWElrTlBMWEhWR0dMQ3FUb0k0elBIaHNEemQxWXBBYVo5UDlYUE16T0tuZysiLCJtYWMiOiIxZWYyZDRjOTI2MDM0ZTY3NGExZjAxMDJiNzg2ZjJlY2U2MDk0MzM1YTM1YWJjMDU2MzM0ZmE0YjM5ZTNiZGRmIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6InVCcHFTTDJBMkZKTGhZSExVWUVqVFE9PSIsInZhbHVlIjoiWE5hR004S3RDd3hXaEM2RDU1NFExQU8vTFp6MzNzOTlxTXVienUycGRWVEdTckFEMWpwNnJxSGRZa203K3c5M0tacEpyTTROaTl2L2JVNTdpT2V0bng0Rnc0ZmpYZWJHZGgvL1E4VVpoOFgvR3JNQXp1NU5UeUlFNjlOYmtEN24iLCJtYWMiOiJjYzQzMjBjZWZmYzEzMzQ4ODYxNTFhZDFlOTcyNzRjMDMzMTUxMDI3Y2JiNmE5YjY1YWNjMzMwZjM5YTczYjMyIiwidGFnIjoiIn0%3D",
+						"name": "cookie",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"name": "content-type",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "<calculated when request is sent>",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"\",\r\n  \"email\": \"\",\r\n  \"telefono\": \"\",\r\n  \"direccion\": \"\",\r\n  \"dni\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/estudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"estudiantes"
+					]
+				},
+				"description": "Crea un nuevo estudiante.\n\nRequiere que se le pase una serie de datos en un JSON:\n\n{\n\n\"nombre\" -> obligatorio, min. 5, max. 60,\n\n\"email\" -> obligatorio, unico, formato email,\n\n\"telefono\" -> obligatorio,\n\n\"direccion\" -> opcional, max. 255,\n\n\"dni\" -> opcional, max. 9\n\n}\n\nDevolverá el estudiante que hemos creado con un 201 o un 404 si no lo encuentra o ya existe uno con el email que hemos indicado."
+			},
+			"response": [
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Test 1234\",\r\n  \"email\": \"emailtest3@gmail.com\",\r\n  \"telefono\": \"987654321\",\r\n  \"direccion\": \"Avenida Programador 12\",\r\n  \"dni\": \"11122233A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "422 Validation Error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Test 1234\",\r\n  \"email\": \"emailtest4@gmail.com\",\r\n  \"telefono\": \"987654321\",\r\n  \"direccion\": \"Avenida Programador 12\",\r\n  \"dni\": \"11122233A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "PUT /api/estudiantes/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "0",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"\",\r\n  \"email\": \"\",\r\n  \"telefono\": \"\",\r\n  \"direccion\": \"\",\r\n  \"dni\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/estudiantes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"estudiantes",
+						"1"
+					]
+				},
+				"description": "Actualiza todos los campos de un estudiante.\n\nRequiere que se le pase una serie de datos en un JSON:\n\n{\n\n\"nombre\" -> obligatorio, min. 5, max. 60,\n\n\"email\" -> obligatorio, unico, formato email,\n\n\"telefono\" -> obligatorio,\n\n\"direccion\" -> opcional, max. 255,\n\n\"dni\" -> opcional, max. 9\n\n}\n\nDevolverá un código 200 si actualiza el estudiante correctamente, un 422 si no se le indican los campos obligatorios o el email existe en otro usuario y un 404 si no encuentra el estudiante que queremos modificar."
+			},
+			"response": [
+				{
+					"name": "200 Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Adrià Matoses Actualizado\",\r\n  \"email\": \"adriam.actualizado@gmail.com\",\r\n  \"telefono\": \"123 123 123\",\r\n  \"direccion\": \"Calle Verdadera 123\",\r\n  \"dni\": \"87654321A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "404 Not Found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Adrià Matoses Actualizado\",\r\n  \"email\": \"adriam.vaadarerror@gmail.com\",\r\n  \"telefono\": \"123 123 123\",\r\n  \"direccion\": \"Calle Verdadera 123\",\r\n  \"dni\": \"87654321A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/9999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"9999"
+							]
+						},
+						"description": "Actualiza todos los campos de un estudiante.\n\nRequiere que se le pase una serie de datos en un JSON:\n\n{\n\n\"nombre\" -> obligatorio, min. 5, max. 60,\n\n\"email\" -> obligatorio, unico, formato email,\n\n\"telefono\" -> obligatorio,\n\n\"direccion\" -> opcional, max. 255,\n\n\"dni\" -> opcional, max. 9\n\n}\n\nDevolverá un código 200 si actualiza el estudiante correctamente, un 422 si no se le indican los campos obligatorios o el email existe en otro usuario y un 404 si no encuentra el estudiante que queremos modificar."
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "422 Validation Error",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Adrià Matoses Actualizado\",\r\n  \"email\": \"adriam.actualizado@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						},
+						"description": "Actualiza todos los campos de un estudiante.\n\nRequiere que se le pase una serie de datos en un JSON:\n\n{\n\n\"nombre\" -> obligatorio, min. 5, max. 60,\n\n\"email\" -> obligatorio, unico, formato email,\n\n\"telefono\" -> obligatorio,\n\n\"direccion\" -> opcional, max. 255,\n\n\"dni\" -> opcional, max. 9\n\n}\n\nDevolverá un código 200 si actualiza el estudiante correctamente, un 422 si no se le indican los campos obligatorios o el email existe en otro usuario y un 404 si no encuentra el estudiante que queremos modificar."
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "PATCH /api/estudiantes/{id}",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"name": "cache-control",
+						"type": "text"
+					},
+					{
+						"key": "Postman-Token",
+						"value": "<calculated when request is sent>",
+						"name": "postman-token",
+						"type": "text"
+					},
+					{
+						"key": "Content-Length",
+						"value": "0",
+						"name": "content-length",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "<calculated when request is sent>",
+						"name": "host",
+						"type": "text"
+					},
+					{
+						"key": "User-Agent",
+						"value": "PostmanRuntime/7.39.1",
+						"name": "user-agent",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"name": "accept",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate, br",
+						"name": "accept-encoding",
+						"type": "text"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive",
+						"name": "connection",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"\",\r\n  \"email\": \"\",\r\n  \"telefono\": \"\",\r\n  \"direccion\": \"\",\r\n  \"dni\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/estudiantes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"estudiantes",
+						"1"
+					]
+				},
+				"description": "Actualiza los campos deseados de un estudiante.\n\nRequiere que se le pase una serie de datos en un JSON:\n\n{\n\n\"nombre\" -> opcional, min. 5, max. 60,\n\n\"email\" -> opcional, unico, formato email,\n\n\"telefono\" -> opcional,\n\n\"direccion\" -> opcional, max. 255,\n\n\"dni\" -> opcional, max. 9\n\n}\n\nDevolverá un código 200 si actualiza el estudiante correctamente, un 422 si no se le indican los campos obligatorios o el email existe en otro usuario y un 404 si no encuentra el estudiante que queremos modificar."
+			},
+			"response": [
+				{
+					"name": "200 Success",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Adrià Matoses Solo Actualizo Nombre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "404 Not Found",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test.sinfuncionar@gmail.com\",\r\n    \"direccion\": \"Calle no se va a guardar 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/9999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"9999"
+							]
+						},
+						"description": "Actualiza los campos deseados de un estudiante.\n\nRequiere que se le pase una serie de datos en un JSON:\n\n{\n\n\"nombre\" -> opcional, min. 5, max. 60,\n\n\"email\" -> opcional, unico, formato email,\n\n\"telefono\" -> opcional,\n\n\"direccion\" -> opcional, max. 255,\n\n\"dni\" -> opcional, max. 9\n\n}\n\nDevolverá un código 200 si actualiza el estudiante correctamente, un 422 si no se le indican los campos obligatorios o el email existe en otro usuario y un 404 si no encuentra el estudiante que queremos modificar."
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "422 Validation Error",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "0",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"adriam.test@gmail.com\",\r\n    \"direccion\": \"Calle no se va a guardar 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						},
+						"description": "Actualiza los campos deseados de un estudiante.\n\nRequiere que se le pase una serie de datos en un JSON:\n\n{\n\n\"nombre\" -> opcional, min. 5, max. 60,\n\n\"email\" -> opcional, unico, formato email,\n\n\"telefono\" -> opcional,\n\n\"direccion\" -> opcional, max. 255,\n\n\"dni\" -> opcional, max. 9\n\n}\n\nDevolverá un código 200 si actualiza el estudiante correctamente, un 422 si no se le indican los campos obligatorios o el email existe en otro usuario y un 404 si no encuentra el estudiante que queremos modificar."
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "DELETE /api/estudiantes/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/estudiantes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"estudiantes",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"2"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "404 Not Found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/estudiantes/9999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"estudiantes",
+								"9999"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
