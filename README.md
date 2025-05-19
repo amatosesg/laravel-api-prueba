@@ -89,7 +89,25 @@ API RESTful para gestión de estudiantes.
 - `DELETE /api/estudiantes/{id}` — Eliminar un estudiante
 
 Para más información revisa la documentación realizada en Postman.  
-*(Incluye aquí el enlace o archivo si lo tienes)*
+
+## Probar la API con Postman
+
+Se incluye una colección de Postman para facilitar las pruebas de la API.
+
+1. **Descarga la colección:**
+   - Ve a la carpeta [`app/postman/`](app/postman/) de este repositorio.
+   - Descarga el archivo `Laravel API Prueba.postman_collection.json`.
+
+2. **Importa la colección en Postman:**
+   - Abre Postman.
+   - Haz clic en **Importar** (botón "Import" arriba a la izquierda).
+   - Selecciona el archivo descargado.
+
+3. **Prueba los endpoints:**
+   - Asegúrate de que el servidor de Laravel esté en ejecución (`php artisan serve`).
+   - Modifica la variable de entorno o la URL base en Postman si es necesario (por defecto: `http://localhost:8000/api`).
+   - Ejecuta las peticiones incluidas en la colección.
+
 
 ## Notas
 
