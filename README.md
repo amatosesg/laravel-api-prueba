@@ -95,7 +95,7 @@ Para más información revisa la documentación realizada en Postman.
 Se incluye una colección de Postman para facilitar las pruebas de la API.
 
 1. **Descarga la colección:**
-   - Ve a la carpeta [`app/postman/`](app/postman/) de este repositorio.
+   - Ve a la carpeta [`postman/`](postman/) de este repositorio.
    - Descarga el archivo `Laravel API Prueba.postman_collection.json`.
 
 2. **Importa la colección en Postman:**
