@@ -112,5 +112,6 @@ Se incluye una colección de Postman para facilitar las pruebas de la API.
 ## Notas
 
 - No es necesario configurar autenticación para usar la API.
+- La parte teórica de la prueba se ha enviado junto con el enlace a este repositorio por correo electrónico. Además, también se encuentra adjunta en este repositorio para mayor comodidad. Se puede encontrar en la carpeta [`docs/`](docs/).
 
 ---
