@@ -32,5 +32,14 @@ class DatabaseSeeder extends Seeder
 
         // Estudiantes de ejemplo generados aleatoriamente
         Estudiante::factory(10)->create();
+
+        // Estudiante de Prueba por si se ejecuta la documentación sin haber hecho nada en la base de datos
+        Estudiante::create([
+            'nombre' => 'Usuario Test',
+            'email' => 'adriam.test@gmail.com',
+            'telefono' => '123 456 789',
+            'direccion' => 'Calle Falsa 123',
+            'dni' => '12345678A'
+        ]);
     }
 }
